@@ -1,0 +1,57 @@
+--1.Top 25 sort by ladder score
+	Select
+	Country,
+	Round(LadderScore,1) as Ladder_Score
+	From
+	Whr2024
+	Order by
+	LadderScore desc
+	Limit 25
+
+--2.Top 25 sort by GDP per capita
+	Select
+	Country,
+	Round(LadderScore,1) as Ladder_Score,
+	Round(LogGDPpercapita,1) as GDP_Per_Capita
+	From
+	Whr2024
+	Order by
+	Ladder_Score desc,
+	GDP_Per_Capita desc
+	Limit 25
+
+--3.Top 25 sort by Social Support
+	Select
+	Country,
+	Round(LadderScore,2) as Ladder_Score,
+	Round(Socialsupport,2) as Social_Support
+	From
+	Whr2024
+	Order by
+	Ladder_Score desc,
+	Social_Support desc
+	Limit 25
+
+--4.Top 25 sort by Life Expectancy
+	Select
+	Country,
+	Round(LadderScore,2) as Ladder_Score,
+	Round(Healthy_life_expectancy,2) as Life_Expectancy
+	From
+	Whr2024
+	Order by
+	Ladder_Score desc,
+	Life_Expectancy desc
+	Limit 25
+
+--5.Top 25 sort by Freedom to make choices
+	Select
+	Country,
+	Round(LadderScore,2) as Ladder_Score,
+	Round(FreedomToMakeChoice,2) as Freedom_to_make_life_choices
+	From
+	Whr2024
+	Order by
+	Ladder_Score desc,
+	FreedomToMakeChoice desc
+	Limit 25
